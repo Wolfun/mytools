@@ -16,8 +16,8 @@ APP_CHANGELOG="v0.1.0: 集成 iris 主题管理、lsd 安装、软链接工具�
 
 # ======= GitHub 仓库信息（按你实际情况改） =======
 GITHUB_USER="Wolfun"           # TODO: 改成你的 GitHub 用户名
-GITHUB_REPO="myapp"            # TODO: 改成你新建的仓库名
-GITHUB_BRANCH="master"         # main 就写 main
+GITHUB_REPO="mytools"            # TODO: 改成你新建的仓库名
+GITHUB_BRANCH="main"         # main 就写 main
 RAW_BASE="https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}"
 
 # iris.sh 的路径（放在同一仓库根目录）
