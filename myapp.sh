@@ -318,13 +318,13 @@ main_menu() {
         echo "============== ${APP_NAME} 综合管理菜单 =============="
         echo "  版本：${APP_VERSION}"
         echo
-        echo "  1) 打开 iris 终端主题管理（iris.sh）"
-        echo "  2) 安装 lsd 并设置 ls=lsd（ASCII 无图标）"
-        echo "  3) 软链接管理工具（为脚本/文件设置启动命令）"
-        echo "  4) 检查并更新 ${APP_NAME}"
-        echo "  5) 清理 myapp 旧备份文件"
-        echo "  6) 查看当前版本与更新说明"
-        echo "  0) 退出"
+        echo "  1. 打开 iris 终端主题管理（iris.sh）"
+        echo "  2. 安装 lsd 并设置 ls=lsd（ASCII 无图标）"
+        echo "  3. 软链接管理工具（为脚本/文件设置启动命令）"
+        echo "  4. 检查并更新 ${APP_NAME}"
+        echo "  5. 清理 myapp 旧备份文件"
+        echo "  6. 查看当前版本与更新说明"
+        echo "  0. 退出"
         echo "====================================================="
         read -rp "请输入选项： " opt
 
