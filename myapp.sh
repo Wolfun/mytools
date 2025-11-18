@@ -51,6 +51,8 @@ RAW_BASE="https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITH
 IRIS_URL="${RAW_BASE}/iris.sh"
 LSD_URL="${RAW_BASE}/lsd_install.sh"
 LINK_URL="${RAW_BASE}/link_tool.sh"
+DOCKER_MENU_URL="${RAW_BASE}/docker_menu.sh"
+
 # 未来例如：
 # SYS_INFO_URL="${RAW_BASE}/system_info.sh"
 # SYS_UPDATE_URL="${RAW_BASE}/system_update.sh"
@@ -293,10 +295,10 @@ submenu_script_manage() {
 }
 
 # ============================
-# 4. 分类 4：myapp 自身管理（自更新 / 备份 / 说明）
+# 00. 分类 00：myapp 自身管理（自更新 / 备份 / 说明）
 # ============================
 
-# 4.1 自更新 myapp.sh（从 GitHub 覆盖当前脚本）
+# 0.1 自更新 myapp.sh（从 GitHub 覆盖当前脚本）
 self_update() {
     echo "== 检查并更新 ${APP_NAME} =="
 
@@ -348,7 +350,7 @@ self_update() {
     press_any_key
 }
 
-# 4.2 清理旧备份：只保留最新 1 个
+# 0.2 清理旧备份：只保留最新 1 个
 clean_old_backups() {
     echo "== 清理 myapp 旧备份 =="
 
@@ -380,7 +382,7 @@ clean_old_backups() {
     press_any_key
 }
 
-# 4.3 关于 / 版本信息
+# 0.3 关于 / 版本信息
 show_about() {
     clear
     echo "===== ${APP_NAME} 关于 / 版本信息 ====="
@@ -440,7 +442,7 @@ main_menu() {
         echo "  1. 系统工具（系统信息 / 更新 / 清理 / BBR 等分类入口）"
         echo "  2. 终端美化与外观（iris / lsd 等）"
         echo "  3. 脚本与快捷命令管理（软链接 / 子脚本缓存管理）"
-        echo "  4. myapp 自身管理（自更新 / 备份 / 说明）"
+        echo "  00. myapp 自身管理（自更新 / 备份 / 说明）"
         echo "  0. 退出"
         echo "====================================================="
         read -rp "请输入选项： " opt
