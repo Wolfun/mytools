@@ -472,8 +472,9 @@ main_menu() {
             1) submenu_system_tools ;;
             2) submenu_appearance ;;
             3) submenu_script_manage ;;
-            4) submenu_myapp_manage ;;
-            5) run_docker_menu ;;
+            4) run_docker_menu ;;
+            00) submenu_myapp_manage ;;
+            
             0)
                 echo "再见 ~"
                 break
