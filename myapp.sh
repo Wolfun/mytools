@@ -295,6 +295,26 @@ submenu_script_manage() {
 }
 
 # ============================
+# docker
+# ============================
+
+run_docker_menu() {
+    echo "== Docker 项目一键部署菜单 =="
+    local target="$CACHE_DIR/docker_menu.sh"
+
+    echo "📥 检查 / 下载 docker_menu.sh ..."
+    if ! curl -fsSL "$DOCKER_MENU_URL" -o "$target"; then
+        echo "❌ 下载 docker_menu.sh 失败，请检查 DOCKER_MENU_URL 设置或网络。"
+        press_any_key
+        return
+    fi
+
+    chmod +x "$target"
+    bash "$target"
+}
+
+
+# ============================
 # 00. 分类 00：myapp 自身管理（自更新 / 备份 / 说明）
 # ============================
 
@@ -442,6 +462,7 @@ main_menu() {
         echo "  1. 系统工具（系统信息 / 更新 / 清理 / BBR 等分类入口）"
         echo "  2. 终端美化与外观（iris / lsd 等）"
         echo "  3. 脚本与快捷命令管理（软链接 / 子脚本缓存管理）"
+        echo "  4. docker管理（实用docker项目）"
         echo "  00. myapp 自身管理（自更新 / 备份 / 说明）"
         echo "  0. 退出"
         echo "====================================================="
@@ -452,6 +473,7 @@ main_menu() {
             2) submenu_appearance ;;
             3) submenu_script_manage ;;
             4) submenu_myapp_manage ;;
+            5) run_docker_menu ;;
             0)
                 echo "再见 ~"
                 break
